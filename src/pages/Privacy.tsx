@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Shield, Info, ArrowLeft, Check } from 'lucide-react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { usePageMeta } from '../hooks/usePageMeta'
 import styles from './Privacy.module.css'
 
 const tocItems = [
@@ -17,6 +18,10 @@ const tocItems = [
 
 export default function Privacy() {
   const ref = useScrollAnimation<HTMLDivElement>()
+  usePageMeta(
+    'プライバシーポリシー - ペット予防接種メモ',
+    'ペット予防接種メモのプライバシーポリシー。本アプリはユーザーの個人情報を一切収集・送信しません。',
+  )
 
   return (
     <div ref={ref}>

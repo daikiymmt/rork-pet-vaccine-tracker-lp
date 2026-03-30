@@ -6,10 +6,15 @@ import {
 } from 'lucide-react'
 import PhoneMockup from '../components/PhoneMockup'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { usePageMeta } from '../hooks/usePageMeta'
 import styles from './Home.module.css'
 
 export default function Home() {
   const ref = useScrollAnimation<HTMLDivElement>()
+  usePageMeta(
+    'ペット予防接種メモ - 犬と猫の予防接種スケジュール管理アプリ【無料】',
+    '犬と猫の予防接種記録を無料で管理できるアプリ。接種予定日をプッシュ通知でお知らせ。オフライン対応・広告なし・アカウント登録不要。',
+  )
 
   return (
     <div ref={ref}>
