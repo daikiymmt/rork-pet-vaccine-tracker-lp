@@ -141,7 +141,7 @@ export default function Privacy() {
                 <p>本プライバシーポリシーに関するご質問やお問い合わせは、以下の連絡先までお願いいたします。</p>
                 <div className={styles.contact}>
                   <p><strong>ペット予防接種メモ サポート</strong></p>
-                  <p>メールアドレス: <a href="mailto:support@example.com">support@example.com</a></p>
+                  <p><a href="https://forms.gle/UkERD2Wr7gwGLzmp6" target="_blank" rel="noopener noreferrer">こちら</a>にお問い合わせください。</p>
                 </div>
               </Section>
             </article>
