@@ -20,7 +20,7 @@ export default function Privacy() {
   const ref = useScrollAnimation<HTMLDivElement>()
   usePageMeta(
     'プライバシーポリシー - ペット予防接種メモ',
-    'ペット予防接種メモのプライバシーポリシー。本アプリはユーザーの個人情報を一切収集・送信しません。',
+    'ペット予防接種メモのプライバシーポリシー。本アプリはユーザーの個人情報を開発者のサーバーに送信・収集しません。',
   )
 
   return (
@@ -59,7 +59,7 @@ export default function Privacy() {
               <Section id="section-1" num={1} title="基本方針">
                 <div className={styles.highlight}>
                   <Shield size={20} color="var(--primary)" />
-                  <p>本アプリは、ユーザーの個人情報を<strong>一切収集・送信しません</strong>。すべてのデータはお使いの端末内にのみ保存され、外部サーバーに送信されることはありません。</p>
+                  <p>本アプリは、ユーザーの個人情報を<strong>開発者のサーバーに送信・収集しません</strong>。すべてのデータはお使いの端末内にのみ保存され、外部サーバーに送信されることはありません。</p>
                 </div>
                 <p>本アプリは以下の原則に基づいて設計されています：</p>
                 <BulletList items={[
@@ -69,6 +69,7 @@ export default function Privacy() {
                   'トラッキングツールは使用していません',
                   'アナリティクスツールは使用していません',
                 ]} />
+                <p>本アプリは、ユーザーのデータを収益化することはありません。</p>
               </Section>
 
               <Section id="section-2" num={2} title="収集する情報">
@@ -86,7 +87,7 @@ export default function Privacy() {
               </Section>
 
               <Section id="section-3" num={3} title="情報の保存場所">
-                <p>本アプリで入力されたすべての情報は、<strong>お使いの端末内のローカルストレージ（AsyncStorage）</strong>にのみ保存されます。</p>
+                <p>本アプリで入力されたすべての情報は、<strong>端末内のローカルストレージ</strong>にのみ保存されます。</p>
                 <BulletList items={[
                   '外部サーバーへのデータ送信は行いません',
                   'クラウドサービスとのデータ同期は行いません',
