@@ -26,6 +26,7 @@ export default function Header() {
         { label: 'トップページ', href: '/' },
         { label: '機能', href: '/#features' },
         { label: 'よくある質問', href: '/#faq' },
+        { label: 'ポートフォリオ', href: '/portfolio' },
       ]
 
   const ctaHref = isHome ? '#download' : '/#download'

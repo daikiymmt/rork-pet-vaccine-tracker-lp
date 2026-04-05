@@ -26,7 +26,7 @@ export default function Footer() {
             <Link to="/#faq">よくある質問</Link>
             <a href="#">お問い合わせ</a>
             <Link to="/privacy">プライバシーポリシー</Link>
-            <a href="#">利用規約</a>
+            <Link to="/portfolio">ポートフォリオ</Link>
           </div>
         </div>
       </div>
