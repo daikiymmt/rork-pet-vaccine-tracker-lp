@@ -198,7 +198,7 @@ export default function Home() {
             <h2>大切なペットの健康を、<br />今日から管理しませんか？</h2>
             <p>無料・広告なし・アカウント登録不要。<br />今すぐダウンロードして、予防接種のスケジュール管理を始めましょう。</p>
             <div className={styles.storeButtons}>
-              <a href="#" className={styles.storeBtn}>
+              <a href="https://apps.apple.com/jp/app/pet-vaccine-tracker/id6761318844" className={styles.storeBtn} target="_blank" rel="noopener noreferrer">
                 <AppleIcon />
                 <div>
                   <span className={styles.storeBtnLabel}>Download on the</span>
