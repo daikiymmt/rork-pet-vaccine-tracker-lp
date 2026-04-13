@@ -47,7 +47,7 @@ export default function Header() {
       <div className={`container ${styles.inner}`}>
         <Link to="/" className={styles.logo}>
           <div className={styles.logoIcon}><PawPrint size={20} /></div>
-          <span>ペット予防接種メモ</span>
+          <span>犬猫ワクチン管理</span>
         </Link>
 
         <nav className={styles.nav}>

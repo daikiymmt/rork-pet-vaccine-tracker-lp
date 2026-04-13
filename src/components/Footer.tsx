@@ -9,9 +9,9 @@ export default function Footer() {
         <div className={styles.brand}>
           <div className={styles.logo}>
             <div className={styles.logoIcon}><PawPrint size={18} /></div>
-            <span>ペット予防接種メモ</span>
+            <span>犬猫ワクチン管理</span>
           </div>
-          <p className={styles.desc}>犬と猫の予防接種記録を管理し、接種予定日を忘れないようにするためのアプリです。</p>
+          <p className={styles.desc}>犬と猫のワクチン接種証明書・接種記録をまとめて管理し、接種予定日を忘れないようにするためのアプリです。</p>
         </div>
         <div className={styles.links}>
           <div className={styles.col}>
@@ -32,7 +32,7 @@ export default function Footer() {
       </div>
       <div className="container">
         <div className={styles.bottom}>
-          <p>&copy; 2026 ペット予防接種メモ. All rights reserved.</p>
+          <p>&copy; 2026 犬猫ワクチン管理. All rights reserved.</p>
         </div>
       </div>
     </footer>

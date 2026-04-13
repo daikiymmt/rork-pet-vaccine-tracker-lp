@@ -19,8 +19,8 @@ const tocItems = [
 export default function Privacy() {
   const ref = useScrollAnimation<HTMLDivElement>()
   usePageMeta(
-    'プライバシーポリシー - ペット予防接種メモ',
-    'ペット予防接種メモのプライバシーポリシー。本アプリはユーザーの個人情報を開発者のサーバーに送信・収集しません。',
+    'プライバシーポリシー - 犬猫ワクチン管理',
+    '犬猫ワクチン管理のプライバシーポリシー。本アプリはユーザーの個人情報を開発者のサーバーに送信・収集しません。',
   )
 
   return (
@@ -39,7 +39,7 @@ export default function Privacy() {
         <div className="container">
           <div className={styles.body}>
             <div className={styles.intro}>
-              <p>「ペット予防接種メモ」（以下「本アプリ」）は、ユーザーのプライバシーを最優先に設計されています。本プライバシーポリシーでは、本アプリにおけるデータの取り扱いについてご説明します。</p>
+              <p>「犬猫ワクチン管理」（以下「本アプリ」）は、ユーザーのプライバシーを最優先に設計されています。本プライバシーポリシーでは、本アプリにおけるデータの取り扱いについてご説明します。</p>
             </div>
 
             <div className={styles.toc}>
@@ -75,9 +75,9 @@ export default function Privacy() {
               <Section id="section-2" num={2} title="収集する情報">
                 <p>本アプリでは、以下の情報をユーザーが入力し、端末内に保存します：</p>
                 <h3>ペットに関する情報</h3>
-                <BulletList items={['ペットの名前', 'ペットの種類（犬・猫）', 'ペットの誕生日', 'メモ（任意）']} />
+                <BulletList items={['ペットの名前', 'ペットの種類（犬・猫）', 'ペットの誕生日', 'ペットの写真（任意）', 'メモ（任意）']} />
                 <h3>予防接種に関する情報</h3>
-                <BulletList items={['ワクチンの種類', '接種日', '次回接種予定日', '動物病院名', 'メモ（任意）']} />
+                <BulletList items={['ワクチンの種類', '接種日', '次回接種予定日', '動物病院名', '接種証明書の写真（任意）', 'メモ（任意）']} />
                 <h3>設定情報</h3>
                 <BulletList items={['通知のオン/オフ設定', '通知日数の設定（接種予定日の何日前に通知するか）', 'チュートリアルの表示状態']} />
                 <div className={styles.note}>
@@ -141,7 +141,7 @@ export default function Privacy() {
               <Section id="section-9" num={9} title="お問い合わせ">
                 <p>本プライバシーポリシーに関するご質問やお問い合わせは、以下の連絡先までお願いいたします。</p>
                 <div className={styles.contact}>
-                  <p><strong>ペット予防接種メモ サポート</strong></p>
+                  <p><strong>犬猫ワクチン管理 サポート</strong></p>
                   <p><a href="https://forms.gle/UkERD2Wr7gwGLzmp6" target="_blank" rel="noopener noreferrer">こちら</a>にお問い合わせください。</p>
                 </div>
               </Section>

@@ -1,8 +1,8 @@
 import {
   Shield, Download, ArrowDown, Lock, PawPrint,
   FileText, Bell, AlertCircle, Calendar,
-  CheckCircle, ArrowRight, Check,
-  ChevronDown,
+  ArrowRight, Check,
+  ChevronDown, Camera, ImagePlus,
 } from 'lucide-react'
 import PhoneMockup from '../components/PhoneMockup'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
@@ -12,8 +12,8 @@ import styles from './Home.module.css'
 export default function Home() {
   const ref = useScrollAnimation<HTMLDivElement>()
   usePageMeta(
-    'ペット予防接種メモ - 犬と猫の予防接種スケジュール管理アプリ【無料】',
-    '犬と猫の予防接種記録を無料で管理できるアプリ。接種予定日をプッシュ通知でお知らせ。オフライン対応・広告なし・アカウント登録不要。',
+    '犬猫ワクチン管理 - 証明書・接種記録をまとめて管理できるアプリ【無料】',
+    '犬と猫のワクチン接種証明書・接種記録をまとめて管理できる無料アプリ。証明書の写真保存、接種予定日のプッシュ通知リマインダー機能付き。オフライン対応・広告なし・アカウント登録不要。',
   )
 
   return (
@@ -31,10 +31,10 @@ export default function Home() {
               <Shield size={16} />
               安心のオフライン対応
             </div>
-            <h1>大切なペットの<br /><span className="text-gradient">予防接種</span>を<br />もう忘れない</h1>
+            <h1>大切なペットの<br /><span className="text-gradient">ワクチン記録</span>を<br />まとめて管理</h1>
             <p className={styles.heroDesc}>
-              犬と猫の予防接種記録をかんたんに管理。<br className={styles.spBr} />
-              接種予定日が近づいたら通知でお知らせ。<br />
+              犬と猫の接種証明書・接種記録をひとつのアプリで管理。<br className={styles.spBr} />
+              証明書の写真保存や、次回予定日のリマインダー通知に対応。<br />
               すべてのデータはお使いの端末に保存されるので、<br className={styles.spBr} />
               インターネット接続は不要です。
             </p>
@@ -68,8 +68,8 @@ export default function Home() {
           <div className={styles.heroVisual}>
             <PhoneMockup />
             <div className={`${styles.floatingCard} ${styles.floating1}`}>
-              <CheckCircle size={20} color="#22C55E" />
-              <span>狂犬病ワクチン接種済み</span>
+              <Camera size={20} color="#22C55E" />
+              <span>接種証明書を保存済み</span>
             </div>
             <div className={`${styles.floatingCard} ${styles.floating2}`}>
               <Bell size={20} color="#F59E0B" />
@@ -155,7 +155,7 @@ export default function Home() {
             </div>
             <div className={styles.privacyContent}>
               <h2>プライバシーを最優先に設計</h2>
-              <p>ペット予防接種メモは、お使いの端末内にすべてのデータを保存します。アカウント登録やインターネット接続は一切不要。あなたとペットの大切な情報が外部に送信されることはありません。</p>
+              <p>犬猫ワクチン管理は、お使いの端末内にすべてのデータを保存します。アカウント登録やインターネット接続は一切不要。あなたとペットの大切な情報が外部に送信されることはありません。</p>
               <div className={styles.privacyBadges}>
                 <span className={styles.privacyBadge}><Lock size={18} />ローカル保存</span>
                 <span className={styles.privacyBadge}><AlertCircle size={18} />アカウント不要</span>
@@ -196,7 +196,7 @@ export default function Home() {
               <div className={`${styles.downloadShape} ${styles.downloadShape2}`} />
             </div>
             <h2>大切なペットの健康を、<br />今日から管理しませんか？</h2>
-            <p>無料・広告なし・アカウント登録不要。<br />今すぐダウンロードして、予防接種のスケジュール管理を始めましょう。</p>
+            <p>無料・広告なし・アカウント登録不要。<br />今すぐダウンロードして、ワクチンの接種記録・証明書の管理を始めましょう。</p>
             <div className={styles.storeButtons}>
               <a href="https://apps.apple.com/jp/app/pet-vaccine-tracker/id6761318844" className={styles.storeBtn} target="_blank" rel="noopener noreferrer">
                 <AppleIcon />
@@ -223,17 +223,19 @@ export default function Home() {
 /* ---- Data ---- */
 
 const features = [
-  { icon: PawPrint, title: 'ペット登録', desc: '犬・猫を何匹でも登録可能。名前、種類、誕生日、メモなどの基本情報を記録できます。', color: 'iconPrimary' },
+  { icon: Camera, title: '接種証明書の保存', desc: 'ワクチン接種証明書の写真を撮影・保存。動物病院でもらった証明書をアプリ内でいつでも確認できます。', color: 'iconPrimary' },
   { icon: FileText, title: '接種記録', desc: 'ワクチンの種類、接種日、次回予定日、動物病院名を記録。接種履歴を一覧で確認できます。', color: 'iconBlue' },
   { icon: Bell, title: '通知リマインダー', desc: '接種予定日の1〜7日前にプッシュ通知でお知らせ。期限切れも毎日通知で見逃しません。', color: 'iconWarning' },
+  { icon: ImagePlus, title: 'ペット写真アイコン', desc: 'カメラロールからお気に入りの写真を選んで、ペットのアイコンに設定できます。', color: 'iconSuccess' },
+  { icon: AlertCircle, title: 'ステータス管理', desc: '次回予定日が近い順に自動ソート。「あと○日」の表示で接種状況を一目で把握できます。', color: 'iconDanger' },
+  { icon: Calendar, title: 'かんたん操作', desc: '接種日を入力すると次回予定日を自動設定。初回チュートリアルで使い方もすぐわかります。', color: 'iconPurple' },
   { icon: Shield, title: 'オフライン対応', desc: 'すべてのデータは端末内に保存。インターネット接続不要で、個人情報が外部に送信されることはありません。', color: 'iconSuccess' },
-  { icon: AlertCircle, title: 'ステータス管理', desc: '「予定あり」「本日」「期限切れ」「未設定」の4つのステータスで接種状況を一目で把握。', color: 'iconDanger' },
-  { icon: Calendar, title: 'かんたん操作', desc: '初回チュートリアルで使い方をガイド。直感的なUIで、すぐに使い始められます。', color: 'iconPurple' },
+  { icon: PawPrint, title: 'ペット登録', desc: '犬・猫を何匹でも登録可能。名前、種類、誕生日、メモなどの基本情報を記録できます。', color: 'iconPurple' },
 ]
 
 const steps = [
   { icon: PawPrint, title: 'ペットを登録', desc: '名前、種類（犬・猫）、誕生日などの基本情報を入力してペットを登録します。', color: 'stepTeal' },
-  { icon: FileText, title: '接種記録を入力', desc: 'ワクチンの種類、接種日、次回予定日、動物病院名を記録します。', color: 'stepBlue' },
+  { icon: FileText, title: '接種記録・証明書を入力', desc: 'ワクチンの種類、接種日、動物病院名を記録。証明書の写真も一緒に保存できます。', color: 'stepBlue' },
   { icon: Bell, title: '通知を受け取る', desc: '接種予定日が近づくと自動で通知。もう忘れる心配はありません。', color: 'stepOrange' },
 ]
 
