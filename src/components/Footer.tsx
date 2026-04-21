@@ -19,7 +19,7 @@ export default function Footer() {
             <Link to="/#features">機能</Link>
             <Link to="/#how-it-works">使い方</Link>
             <Link to="/#vaccines">対応ワクチン</Link>
-            <Link to="/#download">ダウンロード</Link>
+            <a href="https://apps.apple.com/jp/app/pet-vaccine-tracker/id6761318844" target="_blank" rel="noopener noreferrer">ダウンロード</a>
           </div>
           <div className={styles.col}>
             <h4>サポート</h4>

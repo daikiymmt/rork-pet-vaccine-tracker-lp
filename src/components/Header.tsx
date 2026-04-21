@@ -8,6 +8,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const isHome = location.pathname === '/'
+  const appStoreUrl = 'https://apps.apple.com/jp/app/pet-vaccine-tracker/id6761318844'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -28,8 +29,6 @@ export default function Header() {
         { label: 'よくある質問', href: '/#faq' },
         { label: 'ポートフォリオ', href: '/portfolio' },
       ]
-
-  const ctaHref = isHome ? '#download' : '/#download'
 
   const handleNavClick = (href: string) => {
     setMenuOpen(false)
@@ -62,14 +61,9 @@ export default function Header() {
           )}
         </nav>
 
-        {isHome ? (
-          <a href={ctaHref} className={`btn btn-sm btn-primary ${styles.cta}`}
-            onClick={(e) => { e.preventDefault(); handleNavClick(ctaHref) }}>
-            ダウンロード
-          </a>
-        ) : (
-          <Link to={ctaHref} className={`btn btn-sm btn-primary ${styles.cta}`}>ダウンロード</Link>
-        )}
+        <a href={appStoreUrl} className={`btn btn-sm btn-primary ${styles.cta}`} target="_blank" rel="noopener noreferrer">
+          ダウンロード
+        </a>
 
         <button className={styles.menuBtn} onClick={() => setMenuOpen(!menuOpen)} aria-label="メニュー">
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -88,13 +82,9 @@ export default function Header() {
                 <Link key={item.label} to={item.href} onClick={() => setMenuOpen(false)}>{item.label}</Link>
               ),
             )}
-            {isHome ? (
-              <a href={ctaHref} className="btn btn-primary" onClick={(e) => { e.preventDefault(); handleNavClick(ctaHref) }}>
-                ダウンロード
-              </a>
-            ) : (
-              <Link to={ctaHref} className="btn btn-primary" onClick={() => setMenuOpen(false)}>ダウンロード</Link>
-            )}
+            <a href={appStoreUrl} className="btn btn-primary" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
+              ダウンロード
+            </a>
           </nav>
         </div>
       )}

@@ -39,7 +39,7 @@ export default function Home() {
               インターネット接続は不要です。
             </p>
             <div className={styles.heroActions}>
-              <a href="#download" className="btn btn-primary btn-lg" onClick={smoothScroll}>
+              <a href="https://apps.apple.com/jp/app/pet-vaccine-tracker/id6761318844" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
                 <Download size={20} />
                 無料ダウンロード
               </a>
