@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "pet-vaccine-tracker-lp",
+  "name": "rork-pet-vaccine-tracker-lp",
   "compatibility_date": "2026-04-26",
   "assets": {
     "directory": "./dist",
